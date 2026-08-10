@@ -1,0 +1,292 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baklol Mandali 😂</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff512f, #dd2476, #7f00ff);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 45px 20px 25px;
+        }
+
+        header h1 {
+            font-size: 48px;
+            text-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            animation: bounce 2s infinite;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .warning {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: rgba(255,255,255,0.18);
+            backdrop-filter: blur(10px);
+        }
+
+        .members {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.16);
+            border: 1px solid rgba(255,255,255,0.3);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) rotate(1deg);
+            background: rgba(255,255,255,0.25);
+        }
+
+        .emoji {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 25px;
+        }
+
+        .card p {
+            margin-top: 8px;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* POPUP */
+
+        .popup-bg {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .popup {
+            width: 90%;
+            max-width: 450px;
+            background: linear-gradient(135deg, #ff9966, #ff5e62);
+            padding: 35px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            animation: popup 0.3s ease;
+        }
+
+        .popup .bigemoji {
+            font-size: 70px;
+        }
+
+        .popup h2 {
+            margin: 15px 0;
+            font-size: 30px;
+        }
+
+        .popup p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 12px 28px;
+            border: none;
+            border-radius: 25px;
+            background: white;
+            color: #ff4b5c;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+        }
+
+        @keyframes popup {
+            from {
+                transform: scale(0.6);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+            0%,100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        @media(max-width:600px) {
+            header h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>😂 BAKLOL MANDALI 😂</h1>
+    <p>Instagram ka sabse dangerous group</p>
+
+    <div class="warning">
+        ⚠️ Entry at your own risk... dimag ghar pe chhod ke aaye
+    </div>
+</header>
+
+
+<section class="members">
+
+    <div class="card" onclick="showFunny('Preety', '👑', 'Group ki unofficial CEO. Reply kare ya na kare, attitude full online rehta hai 😂', 'Preety')">
+        <div class="emoji">👑</div>
+        <h2>Preety</h2>
+        <p>Click karo... himmat hai toh 😭</p>
+    </div>
+
+
+    <div class="card" onclick="showFunny('Stree', '👻', 'Stree hai... raat ko message mat karna, warna seen karke dara degi 😂', 'Stree')">
+        <div class="emoji">👻</div>
+        <h2>Stree</h2>
+        <p>Click at your own risk 💀</p>
+    </div>
+
+
+    <div class="card" onclick="showFunny('Rishab Kumawat', '🤡', 'Rishab bhai ka confidence 100%, logic kabhi-kabhi unavailable 😂', 'Rishab')">
+        <div class="emoji">🤡</div>
+        <h2>Rishab Kumawat</h2>
+        <p>Logic loading... 1%</p>
+    </div>
+
+
+    <div class="card" onclick="showFunny('Erin', '😎', 'Erin group ki woh member hai jo sabki baat padhti hai... par reply apni marzi se karti hai 😂', 'Erin')">
+        <div class="emoji">😎</div>
+        <h2>Erin</h2>
+        <p>Online but emotionally offline 😂</p>
+    </div>
+
+
+    <div class="card" onclick="showFunny('Spider', '🕷️', 'Spider har conversation mein kahin na kahin chipka hua mil jayega 😂', 'Spider')">
+        <div class="emoji">🕷️</div>
+        <h2>Spider</h2>
+        <p>Wall pe bhi, group mein bhi 🕷️</p>
+    </div>
+
+</section>
+
+
+<footer>
+    Made with ❤️ & unlimited bakchodi <br>
+    © Baklol Mandali 2026
+</footer>
+
+
+<!-- POPUP -->
+
+<div class="popup-bg" id="popupBg">
+
+    <div class="popup">
+
+        <div class="bigemoji" id="popupEmoji">😂</div>
+
+        <h2 id="popupName">Name</h2>
+
+        <p id="popupText">
+            Funny message
+        </p>
+
+        <button onclick="closePopup()">
+            😂 Haan Bhai Samajh Gaya
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function showFunny(name, emoji, text) {
+
+    document.getElementById("popupName").innerText = name;
+    document.getElementById("popupEmoji").innerText = emoji;
+    document.getElementById("popupText").innerText = text;
+
+    document.getElementById("popupBg").style.display = "flex";
+
+}
+
+function closePopup() {
+
+    document.getElementById("popupBg").style.display = "none";
+
+}
+
+
+// Popup ke bahar click karne par close
+
+document.getElementById("popupBg").addEventListener("click", function(e) {
+
+    if(e.target === this) {
+        closePopup();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
+```
